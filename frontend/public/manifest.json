@@ -1,0 +1,38 @@
+{
+  "short_name": "PWA",
+  "name": "Demo of PWA capability",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "128x128",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "pwa-fun-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "pwa-fun-196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "pwa-fun-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "no-bg-pwa-fun-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#FF7250",
+  "background_color": "#262626",
+  "gcm_sender_id": "258121494101",
+  "fcm_sender_id": 258121494101,
+  "sender_id": 258121494101
+}
