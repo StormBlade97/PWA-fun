@@ -49,5 +49,5 @@ export const StyledMainButton = styled(MainButton)`
 export const Grouper = styled.div`
   position: relative;
   display: flex;
-  z-index: -10;
+  z-index: 10;
 `;

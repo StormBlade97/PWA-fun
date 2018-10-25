@@ -27,8 +27,10 @@ export default class ButtonGroup extends React.Component {
     if (window.navigator.vibrate) window.navigator.vibrate(100);
   };
   handleSubmission = () => {
-    if (this.state.selected !== false) this.props.onSelect(this.state.selected);
-    else this.setState({ mainButtonHeld: false });
+    if (this.state.selected !== false && this.state.selected !== null) {
+      console.log('Submitting value', this.state.selected);
+      this.props.onSelect(this.state.selected);
+    } else this.setState({ mainButtonHeld: false });
   };
   render() {
     const childArr = React.Children.toArray(this.props.children);

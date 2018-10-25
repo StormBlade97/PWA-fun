@@ -1,3 +1,8 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const PresentationWrapper
+export const HomeButtonAligner = styled.div`
+  display: flex;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+`;

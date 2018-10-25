@@ -85,7 +85,7 @@ export default class MainButton extends React.Component {
       });
 
       listen(this.instanceRef, 'touchstart mousedown').start(this.onPointerStart);
-      listen(document, 'touchend mouseup').start(this.onPointerStop);
+      this.eventListeners = listen(document, 'touchend mouseup').start(this.onPointerStop);
     }
   }
 
@@ -189,6 +189,7 @@ export default class MainButton extends React.Component {
   }
 
   componentWillUnmount() {
+    this.eventListeners.stop();
     try {
       this.motionTracker.stop();
       this.pointerMotionRef.stop();

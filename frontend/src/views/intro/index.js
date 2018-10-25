@@ -19,6 +19,9 @@ export default class IntroView extends React.Component {
     e.preventDefault();
     this.props.onNext();
   };
+  componentWillUnMount() {
+    window.clearTimeout(this.timeoutRef);
+  }
   render() {
     return (
       <FullScreenCenterizer onMouseDown={this.handleNextRequest} onTouchEnd={this.handleNextRequest}>
@@ -44,7 +47,7 @@ export default class IntroView extends React.Component {
 }
 
 IntroView.defaultProps = {
-  waitDuration: 1000,
+  waitDuration: 2000,
   onNext: () => console.log('Request on next in component <Intro/>'),
 };
 

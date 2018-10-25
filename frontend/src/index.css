@@ -12,6 +12,7 @@ code {
 
 * {
   box-sizing: border-box;
+  line-height: 1.56;
 }
 
 html,

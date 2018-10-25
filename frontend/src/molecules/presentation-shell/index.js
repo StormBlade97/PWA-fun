@@ -2,7 +2,6 @@ import React from 'react';
 import { BubblePositioner, TextPositioner, Centerizer, Bubble, PresentationContentContainer, Warpper } from './styled';
 import PropTypes from 'prop-types';
 import LogoText from 'atoms/logo-text/LogoText';
-import MountAnimation from 'atoms/mount-animation';
 
 export default class PresentationShell extends React.Component {
   render() {
@@ -32,5 +31,5 @@ PresentationShell.defaultProps = {
 };
 
 PresentationShell.propTypes = {
-  expandBubble: PropTypes.boolean,
+  expandBubble: PropTypes.bool,
 };

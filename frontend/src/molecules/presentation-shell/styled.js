@@ -38,7 +38,7 @@ export const Bubble = styled(AnimatableLandingBubble)`
 `;
 
 export const PresentationContentContainer = styled.div`
-  margin-top: 6rem;
+  margin-top: 7rem;
   padding: 2rem;
 `;
 
@@ -48,5 +48,4 @@ export const Warpper = styled.div`
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 0;
 `;
