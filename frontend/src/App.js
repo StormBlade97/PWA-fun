@@ -1,64 +1,31 @@
 import React, { Component } from 'react';
 import './index.css';
-import './typography.css';
-import { displayNotification } from './notification';
+import Intro from 'views/intro';
+import Main from 'views/main';
+import styled from 'styled-components';
+
+const FullScreen = styled.div`
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+`;
 
 class App extends Component {
   state = {
-    body: '',
-    title: '',
+    view: 'intro',
   };
-
-  showNotification = () => {
-    displayNotification(this.state);
-  };
-
-  setTitle = e => {
-    this.setState({ title: e.target.value });
-  };
-  setBody = e => {
-    this.setState({ body: e.target.value });
+  nextHandler = e => {
+    this.setState({
+      view: 'landing',
+    });
   };
   render() {
-    return (
-      <div>
-        <section className="section">
-          <div className="container">
-            <header>
-              <h1 className="title is-1">Progressive Web App is cool</h1>
-              <p>
-                This is a demo to show the capabilities of <code>PWA</code>
-              </p>
-            </header>
-          </div>
-        </section>
-
-        <section class="section">
-          <div className="container">
-            <div class="box">
-              <h5 className="title is-5">Notification</h5>
-              <div class="field">
-                <div class="control">
-                  <label htmlFor="title">Title</label>
-                  <input class="input" type="text" name="message" value={this.state.title} onChange={this.setTitle} />
-                </div>
-                <div class="control">
-                  <label htmlFor="message">Body</label>
-                  <input class="input" type="text" name="message" value={this.state.body} onChange={this.setBody} />
-                </div>
-              </div>
-              <div className="field">
-                <div className="control">
-                  <button class="button is-info" onClick={this.showNotification}>
-                    Send notification
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    );
+    return <FullScreen>{this.state.view === 'intro' ? <Intro onNext={this.nextHandler} /> : <Main />}</FullScreen>;
   }
 }
 
