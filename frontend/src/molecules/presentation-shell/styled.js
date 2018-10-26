@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { AnimatableLandingBubble } from './animation';
 
 export const BubblePositioner = styled.div`
-  position: absolute;
+  position: fixed;
   z-index: -1;
-  left: -10%;
-  top: -10%;
+  left: -15%;
+  top: -70px;
 `;
 
 export const TextPositioner = styled.div`
@@ -33,8 +33,8 @@ export const Centerizer = styled.div`
 export const Bubble = styled(AnimatableLandingBubble)`
   background-color: #ff7250;
   border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
+  width: 18rem;
+  height: 18rem;
 `;
 
 export const PresentationContentContainer = styled.div`

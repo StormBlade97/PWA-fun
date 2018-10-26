@@ -20,11 +20,11 @@ export default class ButtonGroup extends React.Component {
 
   handleSnapIn = index => {
     this.setState({ selected: index });
-    if (window.navigator.vibrate) window.navigator.vibrate(500);
+    if (window.navigator.vibrate) window.navigator.vibrate(50);
   };
   handleSnapOut = index => {
     this.setState({ selected: false });
-    if (window.navigator.vibrate) window.navigator.vibrate(100);
+    if (window.navigator.vibrate) window.navigator.vibrate(50);
   };
   handleSubmission = () => {
     if (this.state.selected !== false && this.state.selected !== null) {

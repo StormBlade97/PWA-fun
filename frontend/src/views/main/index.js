@@ -35,10 +35,17 @@ export default class Main extends React.Component {
     this.setState({ slide: false });
     console.log('Going back');
   };
+  getText = () => {
+    const { slide } = this.state;
+    if (slide === 'offline') return 'Offline capability';
+    if (slide === 'installable') return 'Installability';
+    if (slide === 'star') return 'What else';
+    if (slide === 'notification') return 'Push notification';
+  };
   render() {
     return (
       <React.Fragment>
-        <PresentationShell expandBubble={this.state.slide}>
+        <PresentationShell expandBubble={this.state.slide} secondaryText={this.getText()}>
           <OfflineSlide show={this.state.slide === 'offline'} />
           <Installability show={this.state.slide === 'installable'} />
           <PushNotification show={this.state.slide === 'notification'} />

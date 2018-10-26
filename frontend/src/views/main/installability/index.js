@@ -27,7 +27,7 @@ export default class Installability extends React.Component {
     return (
       <MountAnimation shouldRender={this.props.show}>
         <Flicker initDelay={1500} i={0} key={0}>
-          <h1 className="title" style={{ margin: '2rem' }}>
+          <h1 className="title" style={{ marginBottom: '2rem' }}>
             "Is this a website or what?"
           </h1>
         </Flicker>

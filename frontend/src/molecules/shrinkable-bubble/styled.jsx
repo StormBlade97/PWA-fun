@@ -28,8 +28,8 @@ export const PositionedShrinkableWrapper = styled(ShrinkableWrapper)`
 export const StyledBubble = styled.div`
   background-color: #ff7250;
   border-radius: 50%;
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
 `;
 
 export const StyledOrbit = styled.div`
