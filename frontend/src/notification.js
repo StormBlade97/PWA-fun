@@ -12,7 +12,7 @@ function urlBase64ToUint8Array(base64String) {
 }
 
 function notificationBootstrap() {
-  if (!Notification) {
+  if (!window.Notification) {
     console.error('There is no Notification object');
     return;
   }
